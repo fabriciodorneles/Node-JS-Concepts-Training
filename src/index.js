@@ -1,10 +1,12 @@
 const express = require('express');
+const cors = require('cors');
 // tá importando só uma função da biblioteca.
 // Botou primeiro a chave vazia, completou a linha e depois voltou na chave pra selecionar a função
 const { uuid, isUuid } = require('uuidv4');
 const { request, response } = require('express');
 const app = express();
 
+app.use(cors());
 app.use(express.json()); //quando quer adicionar um tipo de função que todas as rotas vão ter que passar por elas
                         //Tem que vir antes das rotas, no express, no node, as coisas funcionam de maneira LINEAR
 
